@@ -6,7 +6,7 @@ import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*
 import org.springframework.http.HttpStatus
 
-@CrossOrigin(origins = ["http://localhost:4200"])
+@CrossOrigin(origins = ["https://vercelfrontend-zeta.vercel.app"])
 @RestController
 @RequestMapping("/api/orders")
 class OrderController(private val service: OrderService) {

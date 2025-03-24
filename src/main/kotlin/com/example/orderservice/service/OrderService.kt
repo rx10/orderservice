@@ -13,7 +13,7 @@ class OrderService(
     private val repository: OrderRepository,
     private val restTemplate: RestTemplate
 ) {
-    private val customerServiceUrl = "http://customerservice.railway.internal:8081/api/customers"
+    private val customerServiceUrl = "http://customerservice.railway.internal:8080/api/customers"
 
     // Check if customer exists in Customer Service
     private fun doesCustomerExist(customerId: Long): Boolean {

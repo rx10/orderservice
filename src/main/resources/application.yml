@@ -6,9 +6,9 @@ spring:
     name: order-service
 
   datasource:
-    url: jdbc:postgresql://localhost:5432/orderdb
-    username: postgres
-    password: test123
+    url: jdbc:postgresql://${PGHOST}:${PGPORT}/railway?sslmode=disable
+    username: ${PGUSER}       # "postgres" (default)
+    password: ${PGPASSWORD}   # Railway auto-generates this
     driver-class-name: org.postgresql.Driver
 
   jpa:

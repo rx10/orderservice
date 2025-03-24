@@ -6,6 +6,17 @@ import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*
 import org.springframework.http.HttpStatus
 
+@Configuration
+public class CorsConfig implements WebMvcConfigurer {
+    @Override
+    public void addCorsMappings(CorsRegistry registry) {
+        registry.addMapping("/**")
+                .allowedOrigins("*") // For testing, tighten this later
+                .allowedMethods("*")
+                .allowedHeaders("*");
+    }
+}
+
 @CrossOrigin(origins = ["http://localhost:4200"])
 @RestController
 @RequestMapping("/api/orders")
